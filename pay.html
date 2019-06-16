@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>付款</title>
+        <link rel="stylesheet" type="text/css" href="all.css">
+        <link rel="stylesheet" type="text/css" href="pay.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    </head>
+    <header>
+        <a href="index.html"><img class="toplogo" src="images/Icon.png"></a>
+        <div class="top">
+            <button class="btn btn-outline-light dropdown-toggle dropp" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            商品分類
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="Oolong.html">烏龍茶</a>
+                <a class="dropdown-item" href="JinXuan.html">金萱茶</a>
+                <a class="dropdown-item" href="Blacktea.html">蜜香紅茶</a>
+            </div>
+            <a href="onsale.html" class="topbtn">特價商品</a>
+            <a href="hot.html" class="topbtn">熱門商品</a>
+        </div>
+        <div class="fixed-top search">
+            <form>
+                <input type="search" placeholder="Search" aria-label="Search" class="searchstyle">
+                <button type="submit" class="searchbtnstyle" title="搜尋商品"><img class="topicon" src="icon/search.png"></button>
+            </form>
+        </div>
+    </header>
+    <body>
+        <div class="toplogin">
+            <button class="logout" onclick="location.href='logout.jsp'" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='block';">登出</button>
+            <ul class="topmenu">
+                <li>
+                    <a href="#"><img class="topicon" src="icon/user.png" title="訂單查詢"></a>
+                    <ul>
+                        <li><a href="wish.html">願望清單</a></li>
+                        <li><a href="member.html">修改資料</a></li>
+                        <li><a href="order.html">訂單查詢</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="buycar.html"><img class="topicon" src="icon/cart.png" title="購物車"></a>
+        </div>
+        <div id="id01" class="white_content">
+            <div class="container_left">
+                <form class="signmd-content" action="/action_page.php">
+                    <h1>註冊帳號</h1>
+                    <p>請輸入帳號密碼以註冊帳號</p>
+                    <hr>
+                    <label for="email"><b>帳號</b></label>
+                    <input type="text" placeholder="輸入帳號" name="uname" required>
+                    <label for="psw"><b>密碼</b></label>
+                    <input type="password" placeholder="輸入密碼" name="psw" required>
+                    <label for="psw-repeat"><b>確認密碼</b></label>
+                    <input type="password" placeholder="再一次輸入密碼" name="psw-repeat" required>
+                    <div class="clearfix">
+                        <button type="submit" class="subbtn">註冊</button>
+                        <button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='none'" class="cancelbtn">取消</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container_right">
+                <h1>登入</h1>
+                <p>請輸入帳號密碼以登入帳號</p>
+                <hr>
+                <form class="loginmodal-content animate" action="/action_page.php">
+                    
+                    <label for="uname"><b>帳號</b></label>
+                    <input type="text" placeholder="輸入帳號" name="uname" required>
+                    <label for="psw"><b>密碼</b></label>
+                    <input type="password" placeholder="輸入密碼" name="psw" required>
+                    
+                    <button type="submit" class="subbtn">登入</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='none'" class="cancelbtn">取消</button>
+                </form>
+            </div>
+        </div>
+        <section>
+            <div class="content">
+                
+                <h2>Checkout</h2>
+                <div class="order">
+                    <table>
+                        <tr>
+                            <td colspan="4" class="title">訂單資訊</td>
+                            <hr class="line">
+                        </tr>
+                        <tr>
+                            <td colspan="2">商品資訊</td>
+                            <td>數量</td>
+                            <td>價格</td>
+                        </tr>
+                        <tr>
+                            <td><img class="ph" src="images/black1.jpg"></td>
+                            <td>商品名稱</td>
+                            <td>1</td>
+                            <td>1000$</td>
+                        </tr>
+                    </table>
+                    <hr class="line">
+                </div>
+                <div class="payway">
+                    <table style="width: 50%;">
+                        <tr>
+                            <td class="title">付款方式</td>
+                            <td>
+                                <select size="1">
+                                    <option>請選擇付款方式</option>
+                                    <option>超商取貨付款</option>
+                                    <option>宅配貨到付款</option>
+                                    <option>信用卡付款</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="line">
+                <table style="width: 50%; margin-left: 50%;">
+                    <tr>
+                        <td class="total">小計</td>
+                        <td class="total">NT$&nbsp;1000</td>
+                    </tr>
+                    <tr>
+                        <td class="total">運費</td>
+                        <td class="total">NT$&nbsp;60</td>
+                    </tr>
+                    <tr>
+                        <td class="total">應付總額</td>
+                        <td class="total">NT$&nbsp;1000</td>
+                    </tr>
+                </table>
+                <hr class="line">
+                <div class="Contact">
+                    <table>
+                        <tr>
+                            <td colspan="2" class="title">訂購資訊</td>
+                            <tr>
+                                <td>收件人姓名</td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>連絡電話</td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>電子信箱</td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>地址</td>
+                                <td>
+                                    <select name="地區" size="1">
+                                        <option>請選擇縣市</option>
+                                        <option>基隆市</option>
+                                        <option>臺北市</option>
+                                        <option>新北市</option>
+                                        <option>宜蘭縣</option>
+                                        <option>新竹市</option>
+                                        <option>新竹縣</option>
+                                        <option>桃園市</option>
+                                        <option>苗栗縣</option>
+                                        <option>臺中市</option>
+                                        <option>彰化縣</option>
+                                        <option>南投縣</option>
+                                        <option>嘉義市</option>
+                                        <option>嘉義縣</option>
+                                        <option>雲林縣</option>
+                                        <option>臺南市</option>
+                                        <option>高雄市</option>
+                                        <option>屏東縣</option>
+                                        <option>台東縣</option>
+                                        <option>花蓮縣</option>
+                                        <option>金門縣</option>
+                                        <option>連江縣</option>
+                                        <option>澎湖縣</option>
+                                    </select>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>備註</td>
+                                <td>
+                                    <textarea cols="85" rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input type="submit" class="btn btn-outline-success" onclick="alert3()" value="確定訂購" />
+                    <input type="reset" class="btn btn-outline-success" value="重新選填" />
+                </div>
+            </section>
+            <script>
+            function alert3(){
+            alert("訂購已完成!");
+            }
+            </script>
+            <footer class="footerbg">
+                <div class="navbar-fixed-bottom">
+                    <div class="foot">
+                    <p class="footerright">Contact Us</pre>
+                    <form class="email">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="searchstyle">
+                        <a href="mailto:scps990218@gmail.com"><img class="footicon" src="icon/submit.png"></a>
+                    </form>
+                    <p class="footerright">客服電話:03-4513051</p>
+                    <p class="footerright">訪客人數:99999</p>
+                    <p class="footerright">實體店面:320桃園市中壢區中北路200號32023號</p>
+                    <p class="footercopyright">Copyright © 2019 Jian-Sheng All rights reserved</p>
+                    <p class="footerabout">About Us</p>
+                    <div class="foot2">
+                        <div>
+                            <img src="images/26.jpg" style="width: 100px;height: 100px;">
+                            <p class="footername">王筱瑜</p>
+                            <a href="https://www.facebook.com/profile.php?id=100004937982307" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+                            <a href="https://www.instagram.com/kellkell225/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+                            <a href="http://line.me/ti/p/O0Kzx3jO15" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+                        </div>
+                        <div>
+                            <img src="images/49.jpg" style="width: 100px;height: 100px;">
+                            <p class="footername">杜得瑋</p>
+                            <a href="https://www.facebook.com/david.tu.562" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+                            <a href="https://www.instagram.com/tudavid0721/?hl=zh-tw" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+                            <a href="https://line.me/ti/p/pzJ4nMFFug" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+                        </div>
+                        <div>
+                            <img src="images/29.jpg" style="width: 100px;height: 100px;">
+                            <p class="footername">簡欣平</p>
+                            <a href="https://www.facebook.com/jian.x.ping.9" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+                            <a href="https://www.instagram.com/xxfrog_gua/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+                            <a href="https://line.me/ti/p/xsrZnfplhf" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+                        </div>
+                        <div>
+                            <img src="images/A.png" style="width: 100px;height: 100px;">
+                            <p class="footername">吳怡穎</p>
+                            <a href="https://www.facebook.com/wu.cindy.90" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+                            <a href="https://www.instagram.com/dumo1203/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+                            <a href="https://line.me/ti/p/dudu.cindy" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </body>
+</html>

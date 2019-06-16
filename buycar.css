@@ -1,0 +1,78 @@
+section.page-content{
+background-color: #FFF;
+color: black;
+position: relative;
+margin-top: 5%;
+width: 60%;
+margin-left: 20%;
+margin-right: 20%;
+margin-bottom: 5%;
+border-width: 1px;
+border-color: #009933;
+border-style: solid;
+}
+/********** 購物車 **********/
+.product-picture{
+/* 寬度 */
+width: 10%;
+}
+.product-name{
+/* 寬度 */
+width: 30%;
+vertical-align: middle;
+}
+.product-price, .product-quantity, .product-subtotal{
+/* 寬度 */
+width: 15%;
+}
+.product-delete{
+width: 15%;
+}
+.product-quantity input{
+/* 寬度 */
+width: 50%;
+}
+@media screen and (max-width: 768px){
+.product-thumbnail{
+/* 將區塊隱藏 */
+display: none;
+}
+.product-quantity input{
+/* 寬度 */
+width: 100%;
+}
+}
+.head{
+background-color: #FFF;
+}
+th,tr,td{
+text-align: center;
+}
+ol.breadcolor{
+border:#BE9026 1px;
+background-color: #FFF;
+}
+a.breadfont{
+text-decoration: none;
+color:#BE9026;
+}
+a.breadfont:hover{
+text-decoration: none;
+color:#fff;
+}
+.trash{
+width: 25%;
+}
+.line {
+height: 1px;
+background: #009933;
+}
+h2{
+padding-left: 30%;
+}
+a.btn btn-outline-success btn-lg float-right{
+padding-left: 60%;
+}
+.text{
+float: right;
+}

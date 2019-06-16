@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>購物車</title>
+		<link rel="stylesheet" type="text/css" href="all.css">
+		<link rel="stylesheet" type="text/css" href="buycar.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	</head>
+	<header>
+		<a href="index.html"><img class="toplogo" src="images/Icon.png"></a>
+		<div class="top">
+			<button class="btn btn-outline-light dropdown-toggle dropp" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			商品分類
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="Oolong.html">烏龍茶</a>
+				<a class="dropdown-item" href="JinXuan.html">金萱茶</a>
+				<a class="dropdown-item" href="Blacktea.html">蜜香紅茶</a>
+			</div>
+			<a href="onsale.html" class="topbtn">特價商品</a>
+			<a href="hot.html" class="topbtn">熱門商品</a>
+		</div>
+		<div class="fixed-top search">
+			<form>
+				<input type="search" placeholder="Search" aria-label="Search" class="searchstyle">
+				<button type="submit" class="searchbtnstyle" title="搜尋商品"><img class="topicon" src="icon/search.png"></button>
+			</form>
+		</div>
+	</header>
+	<body>
+		<div class="toplogin"><button class="login" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='block';">登入/註冊</button>
+			<ul class="topmenu">
+				<li>
+					<a href="#"><img class="topicon" src="icon/user.png" title="訂單查詢"></a>
+					<ul>
+						<li><a href="wish.html">願望清單</a></li>
+						<li><a href="member.html">修改資料</a></li>
+						<li><a href="order.html">訂單查詢</a></li>
+					</ul>
+				</li>
+			</ul>
+			<a href="buycar.html"><img class="topicon" src="icon/cart.png" title="購物車"></a>
+		</div>
+		<div id="id01" class="white_content">
+			<div class="container_left">
+				<form class="signmd-content" action="/action_page.php">
+					<h1>註冊帳號</h1>
+					<p>請輸入帳號密碼以註冊帳號</p>
+					<hr>
+					<label for="email"><b>帳號</b></label>
+					<input type="text" placeholder="輸入帳號" name="uname" required>
+					<label for="psw"><b>密碼</b></label>
+					<input type="password" placeholder="輸入密碼" name="psw" required>
+					<label for="psw-repeat"><b>確認密碼</b></label>
+					<input type="password" placeholder="再一次輸入密碼" name="psw-repeat" required>
+					<div class="clearfix">
+						<button type="submit" class="subbtn">註冊</button>
+						<button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='none'" class="cancelbtn">取消</button>
+					</div>
+				</form>
+			</div>
+			<div class="container_right">
+				<h1>登入</h1>
+				<p>請輸入帳號密碼以登入帳號</p>
+				<hr>
+				<form class="loginmodal-content animate" action="/action_page.php">
+					
+					<label for="uname"><b>帳號</b></label>
+					<input type="text" placeholder="輸入帳號" name="uname" required>
+					<label for="psw"><b>密碼</b></label>
+					<input type="password" placeholder="輸入密碼" name="psw" required>
+					
+					<button type="submit" class="subbtn">登入</button>
+					<button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='none'" class="cancelbtn">取消</button>
+				</form>
+			</div>
+		</div>
+		<section class="page-content">
+			<div class="container pt-5 pb-5">
+				<div class="row">
+					<div class="col-12 mb-3 ">
+						<h1 class="mb-3">購物車</h1>
+						<div>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>圖片</th>
+										<th>名稱</th>
+										<th>價格</th>
+										<th>數量</th>
+										<th>總計</th>
+										<th>刪除</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="product-picture"><a href="shop.html"><img src="images/jinxuan1.jpg" class="img-fluid"></a></th>
+										<td class="product-name">金萱</td>
+										<td class="product-price">NT$&nbsp;500</td>
+										<td class="product-quantity">2</td>
+										<td class="product-subtotal">NT$&nbsp;500</td>
+										<td class="product-delete"><a href="#"><img  class="trash" src="icon/delete.png" title="刪除"></a></td>
+									</tr>
+									<tr>
+										<th scope="row" class="product-picture"><a href="shop.html"><img src="images/oolong1.jpg" class="img-fluid"></a></th>
+										<td class="product-name">烏龍茶</td>
+										<td class="product-price">NT$&nbsp;500</td>
+										<td class="product-quantity">2</td>
+										<td class="product-subtotal">NT$&nbsp;500</td>
+										<td class="product-delete"><a href="#"><img  class="trash" src="icon/delete.png" title="刪除"></a></td>
+									</tr>
+								</tbody>
+							</table>
+							<hr class="line">
+						</div>
+					</div>
+					<div class="col-12 col-md-6 d-none d-md-block mb-5">
+					</div>
+					<div class="col-12 col-md-6">
+						<h2>總計</h2>
+						<div class="table-responsive-sm">
+							<table class="table table-borderless">
+								<tbody>
+									<tr >
+										<td class="text">小計</td>
+										<td>NT$&nbsp;500</td>
+									</tr>
+									<tr>
+										<td class="text">總計</td>
+										<td>NT$&nbsp;500</td>
+									</tr>
+								</tbody>
+								<tfoot>
+								<tr>
+									<td colspan="2">
+										<a href="checkout.html" class="btn btn-outline-success btn-lg float-right">前往結帳</a>
+									</td>
+								</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footerbg">
+			<div class="navbar-fixed-bottom">
+				<div class="foot">
+				<p class="footerright">Contact Us</pre>
+				<form class="email">
+					<input type="email" placeholder="EMAIL ADDRESS" class="searchstyle">
+					<a href="mailto:scps990218@gmail.com"><img class="footicon" src="icon/submit.png"></a>
+				</form>
+				<p class="footerright">客服電話:03-4513051</p>
+				<p class="footerright">訪客人數:99999</p>
+				<p class="footerright">實體店面:320桃園市中壢區中北路200號32023號</p>
+				<p class="footercopyright">Copyright © 2019 Jian-Sheng All rights reserved</p>
+				<p class="footerabout">About Us</p>
+				<div class="foot2">
+					<div>
+						<img src="images/26.jpg" style="width: 100px;height: 100px;">
+						<p class="footername">王筱瑜</p>
+						<a href="https://www.facebook.com/profile.php?id=100004937982307" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+						<a href="https://www.instagram.com/kellkell225/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+						<a href="http://line.me/ti/p/O0Kzx3jO15" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+					</div>
+					<div>
+						<img src="images/49.jpg" style="width: 100px;height: 100px;">
+						<p class="footername">杜得瑋</p>
+						<a href="https://www.facebook.com/david.tu.562" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+						<a href="https://www.instagram.com/tudavid0721/?hl=zh-tw" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+						<a href="https://line.me/ti/p/pzJ4nMFFug" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+					</div>
+					<div>
+						<img src="images/29.jpg" style="width: 100px;height: 100px;">
+						<p class="footername">簡欣平</p>
+						<a href="https://www.facebook.com/jian.x.ping.9" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+						<a href="https://www.instagram.com/xxfrog_gua/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+						<a href="https://line.me/ti/p/xsrZnfplhf" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+					</div>
+					<div>
+						<img src="images/A.png" style="width: 100px;height: 100px;">
+						<p class="footername">吳怡穎</p>
+						<a href="https://www.facebook.com/wu.cindy.90" title="連結至fb"><img class="footicon" src="icon/fb.png"></a>
+						<a href="https://www.instagram.com/dumo1203/" title="連結至ig"><img class="footicon" src="icon/ig.png"></a>
+						<a href="https://line.me/ti/p/dudu.cindy" title="連結至lineQRcode"><img class="footicon" src="icon/line.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

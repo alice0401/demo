@@ -1,0 +1,68 @@
+section {
+background-color: #FFF;
+color: black;
+position: relative;
+margin-top: 2%;
+width: 60%;
+margin-top: 5%;
+margin-bottom: 5%;
+margin-left: 20%;
+margin-right: 20%;
+border-width: 1px;
+border-color: #009933;
+border-style: solid;
+font-family: 微軟正黑體;
+}
+/********** 購物車 **********/
+.product-picture{
+/* 寬度 */
+width: 10%;
+}
+.product-name{
+/* 寬度 */
+width: 30%;
+}
+td.ttt{
+vertical-align: middle;
+}
+.product-price, .product-quantity, .product-subtotal{
+/* 寬度 */
+width: 15%;
+}
+.name{
+width: 15%;
+}
+.phonenumber,.pay,.address{
+width: 30%;
+}
+.product-quantity input{
+/* 寬度 */
+width: 50%;
+}
+.head{
+background-color: #FFF;
+}
+tr,td{
+text-align: center;
+vertical-align: middle;
+}
+.line {
+height: 1px;
+background: #009933;
+}
+ol.breadcolor{
+border:#BE9026 1px;
+background-color: #040002;
+padding-left: 5px;
+}
+a.breadfont{
+text-decoration: none;
+color:#BE9026;
+}
+a.breadfont:hover{
+text-decoration: none;
+color:#fff;
+}
+.text{
+float: right;
+}

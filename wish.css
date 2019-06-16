@@ -1,0 +1,58 @@
+section {
+background-color: #fff;
+color: black;
+position: relative;
+margin-top: 2%;
+width:60%;
+margin-top: 5%;
+margin-left: 20%;
+margin-right: 20%;
+border-width: 1px;
+border-color: #009933;
+border-style: solid;
+font-family: 微軟正黑體;
+}
+/********** 購物車 **********/
+.product-picture{
+/* 寬度 */
+width: 10%;
+}
+.product-name{
+/* 寬度 */
+width: 20%;
+}
+.product-price, .product-quantity, .product-subtotal{
+/* 寬度 */
+width: 15%;
+}
+.product-add{
+width: 15%;
+}
+.cart{
+width: 25%;
+}
+.product-delete{
+width: 15%;
+}
+.head{
+background-color: #000000;
+}
+th,tr,td{
+text-align: center;
+}
+ol.breadcolor{
+border:#BE9026 1px ;
+background-color: #040002;
+padding-left: 3px;
+}
+a.breadfont{
+text-decoration: none;
+color: black;
+}
+a.breadfont:hover{
+text-decoration: none;
+color:#fff;
+}
+.trash{
+width: 25px;
+}

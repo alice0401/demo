@@ -1,0 +1,26 @@
+.content{
+position: relative;
+background-color: #fff;
+color: black;
+width: 60%;
+margin-top: 5%;
+margin-left: 20%;
+margin-right: 20%;
+border:#009933 1px solid;
+padding: 5%;
+}
+.line {
+height: 1px;
+background: #009933;
+background-image: linear-gradient(to right,#009933, #ccc, #009933);
+}
+p.name{
+color:#fff;
+}
+input.btn{
+position: relative;
+left:80%;
+}
+h4{
+letter-spacing: 5px;
+}
